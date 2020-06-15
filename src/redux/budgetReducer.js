@@ -9,7 +9,7 @@ const initialState = {
 const REQUEST_BUDGET_DATA = 'REQUEST_BUDGET_DATA'
 
 export const requestBudgetData = () => {
-    axios.get('/api/budget-data').then(res => res.data)
+    let data = axios.get('/api/budget-data').then(res => res.data)
     return {
         type: REQUEST_BUDGET_DATA,
         payload: data
